@@ -12,8 +12,8 @@ phases:
       - npm run build
   post_build:
     commands:
-      - aws s3 sync build/ s3://newtevio
-      - aws cloudfront create-invalidation --distribution-id E1OMWX3FEIZLRZ --paths "/*"
+      - aws s3 sync build/ s3://new-bucket-2236
+      - aws cloudfront create-invalidation --distribution-id E2TO4Z6534M4PW --paths "/*"
 artifacts:
   files: '**/*'
   base-directory: build
